@@ -9,7 +9,6 @@ builder.WebHost.UseUrls(
 );
 
 builder.Services.AddControllers();
-builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 
@@ -23,19 +22,19 @@ builder.Configuration.GetConnectionString(
 ))
 );
 
-builder.Services.AddCors(
-options =>
+builder.Services.AddCors(options =>
 {
     options.AddPolicy(
-    "react",
-    policy =>
-    policy
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader()
+        "react",
+        policy =>
+        policy
+            .WithOrigins(
+                "https://eunmin.vercel.app"
+            )
+            .AllowAnyMethod()
+            .AllowAnyHeader()
     );
-}
-);
+});
 
 var app = builder.Build();
 
