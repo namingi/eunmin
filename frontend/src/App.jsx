@@ -3,7 +3,7 @@ import axios from "axios";
 
 function App() {
 
-const API = "http://localhost:5008/api/todo";
+const API = "https://eunmin-3.onrender.com";
 
 const [todos,setTodos] = useState([]);
 
