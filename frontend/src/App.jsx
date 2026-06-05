@@ -3,7 +3,7 @@ import axios from "axios";
 
 function App() {
 
-const API = "https://eunmin-3.onrender.com";
+const API = "https://eunmin-3.onrender.com/api/Todo";
 
 const [todos,setTodos] = useState([]);
 
